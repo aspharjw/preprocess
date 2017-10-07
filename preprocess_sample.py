@@ -11,10 +11,10 @@ postagger = postag.PosTag()
 # BookingReview 클래스 변수들과 형식은 다음과 같다
 #   company : str
 #   id : str
-#   rate : str
+#   rate : int
 #   context : str
 #   post_time : str
-#   spam_ham : str
+#   spam_ham : bool
 #   context_backup : str
 items = initialize.xl_to_BookingReview('snuproject_bookingreviews.xlsx')
 
@@ -24,12 +24,13 @@ items = initialize.xl_to_BookingReview('snuproject_bookingreviews.xlsx')
 # BookingReview :
 #   company : str
 #   id : str
-#   rate : str
+#   rate : int
 #   context : tuple list
 #   post_time : str
-#   spam_ham : str
+#   spam_ham : bool
 #   context_backup : str
-postagger.hannanum(items)
+#postagger.hannanum(items)
+postagger.twitter(items)
 
 # BookingReview list 를 모두 출력해본다
 for item in items:
