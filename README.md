@@ -1,10 +1,16 @@
 # preprocess
 
-download 3 files in same directory  
+DOWNLOAD   
+3 files in same directory  
+
+INSTALL   
 pip3 install xlrd  
 pip3 install konlpy  
-put snuproject_bookingreviews.xlsx in the same directory  
 
+PUT  
+snuproject_bookingreviews.xlsx in the same directory  
+
+RUN  
 python3 preprocess_sample.py
 
 DESCRIPTION  
