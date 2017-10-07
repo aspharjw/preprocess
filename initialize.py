@@ -38,23 +38,14 @@ def xl_to_BookingReview(file_dir):
         # 모든 데이터 처리를 원할 경우 -> range(1, number_of_rows)
         for row in range(1, 6):
             values = []
-            for col in range(number_of_columns):
-                value = (sheet.cell(row,col).value)
-                try:
-                    value = str(int(value))
-                except ValueError:
-                    pass
-                finally:
-                    values.append(value)
-            #manually save 'context' value in 'context_backup'
-            value = (sheet.cell(row, 3).value)
-            try:
-                value = str(int(value))
-            except ValueError:
-                pass
-            finally:
-                values.append(value)
-
+            values.append(str(sheet.cell(row,0).value))
+            values.append(str(sheet.cell(row,1).value))
+            values.append(int(sheet.cell(row,2).value))
+            values.append(str(sheet.cell(row,3).value))
+            values.append(str(sheet.cell(row,4).value))
+            values.append(bool(sheet.cell(row,5).value))
+            values.append(str(sheet.cell(row,3).value))
+            
             item = BookingReview(*values)
             items.append(item)
 
